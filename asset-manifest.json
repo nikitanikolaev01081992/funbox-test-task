@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/funbox-test-task/static/css/main.ec101f77.css",
+    "main.js": "/funbox-test-task/static/js/main.1fe839a2.js",
+    "static/js/787.196cadc5.chunk.js": "/funbox-test-task/static/js/787.196cadc5.chunk.js",
+    "static/media/pattern.jpg": "/funbox-test-task/static/media/pattern.223fb431789b8be53360.jpg",
+    "static/media/photo.png": "/funbox-test-task/static/media/photo.83c44837451a8bdc6a4f.png",
+    "static/media/Exo2.0-Thin.otf": "/funbox-test-task/static/media/Exo2.0-Thin.51c257bfa8ec3e0cfb4b.otf",
+    "index.html": "/funbox-test-task/index.html",
+    "main.ec101f77.css.map": "/funbox-test-task/static/css/main.ec101f77.css.map",
+    "main.1fe839a2.js.map": "/funbox-test-task/static/js/main.1fe839a2.js.map",
+    "787.196cadc5.chunk.js.map": "/funbox-test-task/static/js/787.196cadc5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec101f77.css",
+    "static/js/main.1fe839a2.js"
+  ]
+}
