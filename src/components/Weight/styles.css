@@ -1,0 +1,44 @@
+.weight {
+	--text-color: #fff;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 80px;
+	height: 80px;
+
+	border-radius: 50%;
+
+	color: var(--text-color);
+
+	background-color: var(--main-color);
+}
+
+.weight_disabled {
+	background-color: var(--main-color-disabled);
+}
+
+.weight_selected {
+	background-color: var(--main-color-selected);
+}
+
+.weight__value,
+.weight__units {
+	margin: 0;
+
+	/* подгонка под макет, по идее такое не обязательно */
+	text-indent: 2px;
+}
+
+.weight__value {
+	font-size: 42px;
+	/* подгонка под макет, по идее такое не обязательно */
+	margin-top: -5px;
+}
+
+.weight__units {
+	font-size: 22px;
+	line-height: 12px;
+}

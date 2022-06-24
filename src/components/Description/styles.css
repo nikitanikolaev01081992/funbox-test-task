@@ -1,0 +1,27 @@
+.description {
+	--text-color: #fff;
+	--text-color-disabled: #ffff66;
+
+	font-size: 13px;
+	line-height: 15px;
+	text-align: center;
+	color: var(--text-color);
+}
+
+.description_disabled {
+	color: var(--text-color-disabled);
+}
+
+.description__buy,
+.description__dot {
+	color: var(--main-color);
+	cursor: pointer;
+}
+
+.description__buy {
+	text-decoration-line: underline;
+	text-decoration-style: dashed;
+
+	/* подгонка */
+	margin-left: 5px;
+}

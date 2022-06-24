@@ -1,0 +1,124 @@
+.card {
+	--bg-color: #f2f2f2;
+	--main-color: #2ea8e6;
+	--main-color-selected: #d91667;
+	--main-color-disabled: #b3b3b3;
+	--font-color-first: #000000;
+	--font-color-second: #666666;
+	--border-width: 4px;
+
+	width: 320px;
+
+	font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+	color: var(--font-color-first);
+}
+.card__content-wrapper {
+	background-color: var(--main-color);
+	border-radius: 12px;
+
+	padding: var(--border-width);
+
+	clip-path: polygon(44px 0, 0 44px, 0 100%, 100% 100%, 100% 0);
+}
+
+.card_selected .card__content-wrapper {
+	background-color: var(--main-color-selected);
+}
+
+.card_disabled .card__content-wrapper {
+	background-color: var(--main-color-disabled);
+}
+
+.card__content {
+	position: relative;
+
+	border-radius: 12px;
+
+	min-height: calc(480px - 2 * var(--border-width));
+
+	background-color: var(--bg-color);
+
+	padding: calc(21px - var(--border-width)) calc(51px - var(--border-width));
+	clip-path: polygon(42px 0, 0 42px, 0 100%, 100% 100%, 100% 0);
+}
+
+/* пришлось выделить отдельный элемент для фоновой картинки, 
+потому что нельзя просто задать прозрачность на всю карточку,
+элемент с весом не должен быть подвержен этому */
+.card__content::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+
+	background-image: url('./photo.png');
+	background-repeat: no-repeat;
+	background-position: calc(-1 * var(--border-width)) calc(100% + var(--border-width));
+}
+
+.card_disabled .card__content::before {
+	opacity: 0.5;
+}
+
+.card_disabled :where(.card__top-text, .card__name, .card__taste, .card__messages) {
+	color: var(--main-color-disabled);
+	opacity: 0.5;
+}
+
+.card__top-text,
+.card__name,
+.card__taste,
+.card__description {
+	margin: 0;
+}
+
+.card__top-text {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--font-color-second);
+}
+
+.card__name {
+	margin-top: 5px;
+
+	font-size: 48px;
+	line-height: 56px;
+	text-indent: -3px;
+}
+
+.card__taste {
+	font-size: 24px;
+	line-height: 28px;
+}
+
+.card__name,
+.card__taste {
+	font-weight: 700;
+}
+
+.card__messages {
+	list-style: none;
+
+	margin: 0;
+	margin-top: 15px;
+	padding: 0;
+
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--font-color-second);
+}
+
+.card__weight {
+	position: absolute;
+	bottom: 12px;
+	right: 12px;
+}
+
+.card__description {
+	margin-top: 14px;
+}
